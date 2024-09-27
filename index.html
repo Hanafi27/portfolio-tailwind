@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="src/final.css" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6"
+              >Hanafi Ilham</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-400 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
+                    >About me</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
+                    >Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skill"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark py-2 mx-8 flex hover:text-primary dark:text-white"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="toggle-dark">
+                    <label for="toggle-dark">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- hero section -->
+    <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center items-center">
+          <div class="w-full self-center px-4 lg:w-1/3" dir="ltr">
+            <h1 id="mengetik" class="flex flex-col text-base font-semibold text-primary dark:text-white md:text-xl">
+              Hello All👋, I'm
+              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">
+                Hanafi Ilham
+              </span>
+            </h1>
+            <h2 class="font-medium text-slate-500 text-lg mb-2 lg:text-2xl">
+              <span class="text-dark dark:text-white">Student</span> | Web Designer | UI/UX
+            </h2>
+            <p class="font-medium text-slate-400 mb-6 leading-relaxed dark:text-white">
+              Student at Telkom University Purwokerto
+            </p>
+            <a
+              href="#"
+              class="text-base font-semibold text-white bg-primary dark:text-white py-3 px-4 rounded-xl hover:shadow-lg hover:opacity-80 transition-all duration-500 ease-in-out"
+            >
+              Contact me
+            </a>
+          </div>
+    
+          <div class="w-full self-center px-4 lg:w-1/3 flex justify-center">
+            <div class="relative mt-10 lg:mt-0 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+              <img src="img/hans.png" alt="Hanafi Ilham" class="max-w-full h-auto object-cover rounded-lg" />
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>    
+    <!-- end hero section -->
+
+    <!-- about section -->
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-primary dark:text-white text-lg mb-3">
+              About me
+            </h4>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
+              let's learn programming
+            </h2>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+              ipsam animi perferendis dolorum enim excepturi cupiditate?
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3
+              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white"
+            >
+              Let's be friends
+            </h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+              accusantium voluptas ipsa laborum odio recusandae tenetur
+              perspiciatis, eius voluptatum laudantium.
+            </p>
+            <div class="flex items-center">
+              <!-- instagram -->
+              <a
+                href="https://www.instagram.com/h.i.hans08/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-current"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+              <!-- end instagram -->
+
+              <!-- facebook -->
+              <a
+                href="https://www.instagram.com/h.i.hans08/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                  />
+                </svg>
+              </a>
+              <!-- end facebook -->
+
+              <!-- tiktok -->
+              <a
+                href="https://www.instagram.com/h.i.hans08/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <!-- end tiktok -->
+
+              <!-- github -->
+              <a
+                href="https://github.com/Hanafi27"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <!-- end github -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end about section -->
+
+    <!-- portofolio section -->
+    <div id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full -x-4">
+          <div class="max-width-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 dark:text-white">New Project</h2>
+            <p class="font-medium text-secondary text-md">
+              Welcome to my portfolio page! Here, you can find a collection of
+              projects I have worked on as a UI/UX Designer and Web Developer.
+              Each project reflects my dedication to creating innovative and
+              functional solutions, with a focus on optimal user experience.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"
+        >
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="img/porto1.png" alt="" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark text-md mt-5 mb-3 dark:text-white">
+              public complaint service application
+            </h3>
+            <p class="font-md text-base text-secondary">
+              is an application that makes it easier for the public to submit
+              complaints or reports related to public services.
+            </p>
+            <a
+              href="https://www.figma.com/community/file/1401939562832641088/heavy-equipment-rental-application"
+              class="block text-base font-semibold text-white bg-primary mt-4 py-2 px-4 w-32 rounded-md hover:shadow-lg hover:opacity-80 transition-all duration-500 ease-in-out"
+            >
+              View Design
+            </a>
+          </div>
+
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img src="img/porto2.png" alt="" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark text-md mt-5 mb-3 dark:text-white">
+              Heavy equipment rental application
+            </h3>
+            <p class="font-md text-base text-secondary">
+              an application that makes it easy for users to rent various types
+              of heavy equipment quickly and efficiently.
+            </p>
+            <a
+              href="#"
+              class="block text-base font-semibold text-white bg-primary mt-4 py-2 px-4 w-32 rounded-md hover:shadow-lg hover:opacity-80 transition-all duration-500 ease-in-out"
+            >
+              View Design
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- endp ortofolio section -->
+
+    <!-- skill section -->
+    <section id="skill" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container mx-auto">
+        <div class="w-full">
+          <h2 class="font-bold text-dark text-3xl mb-6 text-center uppercase dark:text-white">
+            Skill
+          </h2>
+
+          <div class="flex flex-col justify-center items-center lg:w-full lg:flex-row lg:justify-evenly md:w-full md:flex-row md:mx-auto md:flex-wrap md:justify-evenly">
+            <!-- Figma -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="figma"
+                class="mb-3 cursor-pointer"
+                width="60"
+                height="60"
+              >
+                <path
+                  fill="#0ACF83"
+                  d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z"
+                ></path>
+                <path
+                  fill="#A259FF"
+                  d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z"
+                ></path>
+                <path
+                  fill="#F24E1E"
+                  d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z"
+                ></path>
+                <path
+                  fill="#FF7262"
+                  d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z"
+                ></path>
+                <path
+                  fill="#1ABCFE"
+                  d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z"
+                ></path>
+              </svg>
+              <span class="text-secondary">Figma</span>
+            </div>
+          
+            <!-- HTML -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="60"
+                height="60"
+                id="html"
+                class="mb-3"
+              >
+                <path
+                  fill="#E44D26"
+                  d="M3.345 21.601 1.419 0h21.162l-1.928 21.597L11.987 24l-8.642-2.399z"
+                ></path>
+                <path
+                  fill="#F16529"
+                  d="m12 22.164 7.003-1.941L20.65 1.766H12v20.398z"
+                ></path>
+                <path
+                  fill="#EBEBEB"
+                  d="M12 9.778H8.494l-.242-2.713H12V4.416H5.357l.063.71.651 7.301H12V9.778zm0 6.88-.012.003-2.95-.797-.189-2.113H6.19l.371 4.16 5.427 1.506.012-.003v-2.756z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M11.991 9.778v2.649h3.262l-.308 3.436-2.955.797v2.756l5.431-1.505.04-.448.623-6.975.065-.711h-.714l-5.444.001zm0-5.362v2.649h6.399l.053-.596.121-1.343.063-.711-6.636.001z"
+                ></path>
+              </svg>
+              <span class="text-secondary">HTML</span>
+            </div>
+          
+            <!-- CSS -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                viewBox="0 0 16 16"
+                id="css"
+                width="60"
+                height="60"
+                class="mb-3 cursor-pointer"
+              >
+                <path fill="#2196F3" d="m1 0 1.275 14.4L8 16l5.723-1.599L15 0z"></path>
+                <path
+                  fill="#FAFAFA"
+                  d="m12.274 4.709-.161 1.809-.486 5.423L8 12.944l-.003.001-3.625-1.004-.253-2.836h1.776l.132 1.471 1.971.532.001-.001 1.974-.532.269-2.451-6.208.017-.176-1.676 6.533-.077.132-1.794-6.84.019-.115-1.669h8.864z"
+                ></path>
+              </svg>
+              <span class="text-secondary">CSS</span>
+            </div>
+          
+            <!-- Javascript -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                preserveAspectRatio="xMinYMin meet"
+                viewBox="0 0 256 256"
+                id="javascript"
+                class="mb-3 cursor-pointer ml-1"
+              >
+                <path fill="#F7DF1E" d="M0 0h256v256H0V0z"></path>
+                <path
+                  d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"
+                ></path>
+              </svg>
+              <span class="text-secondary ml-1">Javascript</span>
+            </div>
+          
+            <!-- Bootstrap -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="60" height="60" id="bootstrap"  class="mb-3 cursor-pointer ml-1">
+                <path fill="#5B4282" d="M75.701 65.603c-2.334-.768-5.694-.603-10.08-.603h-17.621v23h18.844c2.944 0 5.012-.315 6.203-.535 2.099-.376 3.854-1.104 5.264-1.982 1.409-.876 2.568-2.205 3.478-3.881.908-1.676 1.363-3.637 1.363-5.83 0-2.568-.658-4.54-1.975-6.436-1.316-1.896-3.141-2.965-5.476-3.733zM73.282 55.087c2.317-.688 4.064-1.89 5.239-3.487 1.176-1.598 1.763-3.631 1.763-6.044 0-2.286-.549-4.314-1.646-6.054s-2.662-2.413-4.699-3.056c-2.037-.641-5.53-.446-10.48-.446h-15.459v20h16.587c4.042 0 6.939-.38 8.695-.913zM126 18.625c0-9.182-7.443-16.625-16.625-16.625h-91.75c-9.182 0-16.625 7.443-16.625 16.625v91.75c0 9.182 7.443 16.625 16.625 16.625h91.75c9.182 0 16.625-7.443 16.625-16.625v-91.75zm-35.447 66.12c-1.362 2.773-3.047 4.911-5.052 6.415-2.006 1.504-4.521 2.78-7.544 3.548-3.022.769-6.728 1.292-11.113 1.292h-27.844v-69h27.42c5.264 0 9.485.609 12.665 2.002 3.181 1.395 5.671 3.497 7.474 6.395 1.801 2.898 2.702 5.907 2.702 9.071 0 2.945-.8 5.708-2.397 8.308-1.598 2.602-4.011 4.694-7.237 6.292 4.166 1.222 7.37 3.304 9.61 6.248 2.24 2.945 3.36 6.422 3.36 10.432 0 3.227-.681 6.225-2.044 8.997z"></path>
+              </svg>
+              <span class="text-secondary ml-1">Bootstrap</span>
+            </div>
+
+            <!-- Tailwind -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="tailwind-css" width="100" height="10" class="mb-3 text-sky-500 cursor-pointer ml-1">
+                <path d="M18.5 9.51a4.22 4.22 0 0 1-1.91-1.34A5.77 5.77 0 0 0 12 6a4.72 4.72 0 0 0-5 4 3.23 3.23 0 0 1 3.5-1.49 4.32 4.32 0 0 1 1.91 1.35A5.77 5.77 0 0 0 17 12a4.72 4.72 0 0 0 5-4 3.2 3.2 0 0 1-3.5 1.51zm-13 4.98a4.22 4.22 0 0 1 1.91 1.34A5.77 5.77 0 0 0 12 18a4.72 4.72 0 0 0 5-4 3.23 3.23 0 0 1-3.5 1.49 4.32 4.32 0 0 1-1.91-1.35A5.8 5.8 0 0 0 7 12a4.72 4.72 0 0 0-5 4 3.2 3.2 0 0 1 3.5-1.51z" fill="currentColor"></path>
+              </svg>
+              <span class="text-secondary ml-1 lg:-mb-8">Tailwind</span>
+            </div>
+
+            <!-- Cisco -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="11.752 12.764 797.655 454.437" id="cisco" class=" text-sky-500 cursor-pointer ml-1">
+                <path fill="#c4122e" d="M271 418.843h-32.635v-129.33H271v129.33z"></path>
+                <g transform="matrix(10.33728 0 0 -10.33728 -861.345 7843.84)">
+                  <defs>
+                    <path id="a" d="M84.461 713.596h77.163v43.961H84.461v-43.961z"></path>
+                  </defs>
+                  <clipPath id="b">
+                    <use xlink:href="#a" overflow="visible"></use>
+                  </clipPath>
+                  <g clip-path="url(#b)">
+                    <path fill="#c4122e" d="M134.996 727.2c-.13.066-1.146.668-2.656.668-2.041 0-3.457-1.42-3.457-3.337 0-1.859 1.355-3.34 3.457-3.34 1.484 0 2.517.59 2.656.664v-3.358c-.396-.11-1.475-.445-2.877-.445-3.551 0-6.668 2.448-6.668 6.48 0 3.735 2.82 6.475 6.668 6.475 1.48 0 2.578-.36 2.877-.449V727.2zM102.043 727.2c-.127.066-1.142.668-2.652.668-2.045 0-3.46-1.42-3.46-3.337 0-1.859 1.356-3.34 3.46-3.34 1.484 0 2.516.59 2.652.664v-3.358c-.392-.11-1.47-.445-2.88-.445-3.548 0-6.661 2.448-6.661 6.48 0 3.735 2.82 6.475 6.662 6.475 1.486 0 2.582-.36 2.879-.449V727.2zM144.927 727.821c-1.873 0-3.264-1.474-3.264-3.29 0-1.82 1.391-3.293 3.264-3.293 1.871 0 3.266 1.473 3.266 3.293 0 1.816-1.395 3.29-3.266 3.29m6.611-3.29c0-3.579-2.763-6.479-6.61-6.479-3.849 0-6.608 2.9-6.608 6.48 0 3.572 2.76 6.475 6.607 6.475 3.848 0 6.611-2.903 6.611-6.476M121.512 727.941c-.047.015-1.376.382-2.468.382-1.265 0-1.953-.424-1.953-1.025 0-.762.928-1.028 1.447-1.192l.871-.277c2.05-.652 2.983-2.055 2.983-3.579 0-3.143-2.764-4.199-5.18-4.199-1.679 0-3.252.31-3.407.342v2.88c.278-.07 1.602-.466 2.981-.466 1.571 0 2.293.46 2.293 1.168 0 .634-.625 1-1.408 1.246-.19.064-.478.154-.674.218-1.758.556-3.224 1.59-3.224 3.66 0 2.34 1.752 3.911 4.662 3.911 1.537 0 2.983-.373 3.077-.398v-2.67z"></path>
+                    <path fill="#15495d" d="M89.154 744.23c0 .862-.704 1.561-1.567 1.561s-1.568-.699-1.568-1.56v-3.285a1.568 1.568 0 0 1 3.135 0v3.284zM97.763 748.54a1.567 1.567 0 0 1-3.135 0v-7.594a1.567 1.567 0 0 1 3.135 0v7.595zM106.373 754.438c0 .862-.704 1.562-1.567 1.562-.864 0-1.568-.7-1.568-1.562v-16.613a1.568 1.568 0 0 1 3.135 0v16.613zM114.982 748.54a1.567 1.567 0 0 1-3.135 0v-7.594a1.567 1.567 0 0 1 3.135 0v7.595zM123.582 744.23a1.56 1.56 0 0 1-1.558 1.561 1.566 1.566 0 0 1-1.567-1.56v-3.285a1.562 1.562 0 1 1 3.125 0v3.284zM132.195 748.54a1.563 1.563 0 0 1-3.125 0v-7.594a1.562 1.562 0 1 1 3.125 0v7.595zM140.81 754.438a1.562 1.562 0 0 1-3.125 0v-16.613a1.564 1.564 0 1 1 3.125 0v16.613zM149.423 748.54c0 .863-.699 1.564-1.582 1.564a1.563 1.563 0 0 1-1.562-1.563v-7.595c0-.867.7-1.566 1.562-1.566.883 0 1.582.699 1.582 1.566v7.595zM158.02 744.23a1.563 1.563 0 0 1-3.128 0v-3.284c0-.867.701-1.567 1.564-1.567.862 0 1.563.7 1.563 1.567v3.284z"></path>
+                    <path fill="#c4122e" d="M156.213 719.922v-.196h-.558v-1.451h-.23v1.45h-.56v.197h1.348zM156.33 719.922h.359l.493-1.351h.008l.477 1.35h.352v-1.646h-.235v1.35h-.008l-.5-1.35h-.217l-.488 1.35h-.011v-1.35h-.23v1.647z"></path>
+                  </g>
+                </g>
+              </svg>
+              <span class="text-secondary ml-1">Cisco</span>
+            </div>
+
+            <!-- Git -->
+            <div class="mt-12 text-center flex flex-col items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="git" width="60" height="60" class="mb-3 cursor-pointer">
+                <path fill="#F34F29" d="M124.737 58.378l-55.116-55.114c-3.172-3.174-8.32-3.174-11.497 0l-11.444 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.048-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683.934-.933 2.014-1.638 3.167-2.11v-34.659c-1.153-.472-2.231-1.172-3.167-2.111-2.862-2.86-3.551-7.06-2.083-10.576l-14.313-14.313-37.792 37.79c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858c3.174-3.176 3.174-8.327-.001-11.501z"></path>
+              </svg>
+              <span class="text-secondary ml-1">Git</span>
+            </div>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end skill section -->
+
+    <!-- contact section -->
+      <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-16">
+              <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+              <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Contact me</h2>
+              <p class="font-medium text-secondary md:text-lg">Please contact if you have input or suggestions</p>
+            </div>
+          </div>
+
+          <form action="#">
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+            <label for="name" class="text-base font-bold text-slate-500 dark:text-primary">Name</label>
+            <input type="text" id="name" class="w-full bg-slate-200 text-dark dark:bg-slate-500  p-3 mt-2 rounded-md focus:outline-none focus:ring-slate-600 focus:ring-1 focus:border-primary dark:text-white">
+          </div>
+          <div class="w-full px-4 mb-8">
+            <label for="email" class="text-base font-bold text-slate-500 dark:text-primary">Email</label>
+            <input type="text" id="email" class="w-full bg-slate-200 text-dark dark dark:bg-slate-500 p-3 mt-2 rounded-md focus:outline-none focus:ring-slate-600 focus:ring-1 focus:border-primary dark:text-white">
+          </div>
+          <div class="w-full px-4 mb-8">
+            <label for="massage" class="text-base font-bold text-slate-500 dark:text-primary">Suggestions</label>
+            <textarea type="text" id="massage" class="w-full bg-slate-200 text-dark dark dark:bg-slate-500 p-3 mt-2 rounded-md focus:outline-none focus:ring-slate-600 focus:ring-1 focus:border-primary h-32 dark:text-white"></textarea>
+          </div>
+          <div class="w-full">
+            <button class="block mx-auto text-base font-semibold text-white bg-primary py-4 px-8 rounded-lg lg:w-64">Contact me</button>
+          </div>
+          <div>
+          </div>
+        </div>
+          </form>
+        </div>
+      </section>
+    <!-- end contact section -->
+
+    <!-- footer -->
+      <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+
+        <div class="flex flex-wrap justify-center">
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/4 md:mx-auto">
+              <h2 class="font-bold text-4xl text-white mb-5">Address</h2>
+              <h3 class="font-bold text-2xl mb-2">Contact me</h3>
+              <p>hanafiilham@gmail.com</p>
+              <p>Panundaan, Ciwidey</p>
+              <p>Bandung</p>
+            </div>
+
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-white text-xl mb-5 ">Category</h3>
+            <ul class="text-slate-300">
+              <li><a href="#" class="inline-block text-base mb-3">Figma</a></li>
+              <li><a href="#" class="inline-block text-base mb-3">Front-end web</a></li>
+              <li><a href="#" class="inline-block text-base mb-3">Cisco</a></li>
+            </ul>
+          </div>
+
+          <div class="w-full px-4 mb-12 md:w-1/4">
+            <h3 class="font-semibold text-white text-xl mb-5">Link</h3>
+            <ul class="text-slate-300">
+              <li><a href="#home" class="inline-block text-base mb-3">Home</a></li>
+              <li><a href="#about" class="inline-block text-base mb-3">About me</a></li>
+              <li><a href="#portfolio" class="inline-block text-base mb-3">Portfolio</a></li>
+              <li><a href="#skill" class="inline-block text-base mb-3">Skills</a></li>
+              <li><a href="#contact" class="inline-block text-base mb-3">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full pt-10 border-t border-slate-700">
+
+          <div class="flex items-center justify-center mb-5">
+            <!-- instagram -->
+            <a
+              href="https://www.instagram.com/h.i.hans08/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+            </a>
+            <!-- end instagram -->
+
+            <!-- facebook -->
+            <a
+              href="https://www.instagram.com/h.i.hans08/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                />
+              </svg>
+            </a>
+            <!-- end facebook -->
+
+            <!-- tiktok -->
+            <a
+              href="https://www.instagram.com/h.i.hans08/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                />
+              </svg>
+            </a>
+            <!-- end tiktok -->
+
+            <!-- github -->
+            <a
+              href="https://github.com/Hanafi27"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <!-- end github -->
+          </div>
+
+          <p class="font-medium text-xs text-slate-500 text-center">Create by <span class="text-pink-500">❤ </span> <a href="https://www.instagram.com/h.i.hans08/" target="_blank" class="font-bold text-primary">Hanafi Ilham</a> use <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-sky-500">TailwindCSS</a></p>
+
+        </div>
+        
+        </div>
+      </footer>
+    <!-- end footer -->
+
+
+    <!-- back to top start -->
+     <a href="#home" class="fixed z-[9999] bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full items-center justify-center hover:animate-pulse hidden" id="to-top">
+      <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+     </a>
+    <!-- end back to top start -->
+
+    <!-- script -->
+    <script src="src/script.js"></script>
+  </body>
+</html>
