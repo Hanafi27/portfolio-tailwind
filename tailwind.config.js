@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: ["index.html", "./src/**/*.{html,js}"],
   darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        "hero-pattern": "url('./img/hans.png')",
-      },
       container: {
         center: true,
         padding: "16px",
