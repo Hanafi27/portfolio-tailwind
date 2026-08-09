@@ -1,0 +1,11 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="104" y="96" width="300" height="300" rx="26" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="182" y="174" width="144" height="144" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="8"/>
+  <path d="M254 96v70M254 326v70M104 246h70M334 246h70" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
+  <path d="M506 344c80-110 176-126 286-74" stroke="#22c55e" stroke-width="18" stroke-linecap="round"/>
+  <path d="M526 274c56-70 134-82 228-44" stroke="#0ea5e9" stroke-width="18" stroke-linecap="round"/>
+  <rect x="512" y="120" width="286" height="44" rx="12" fill="#e2e8f0"/>
+  <rect x="512" y="184" width="210" height="24" rx="8" fill="#cbd5e1"/>
+  <text x="104" y="458" fill="#334155" font-family="Arial, sans-serif" font-size="28" font-weight="700">IoT Smart Farming</text>
+</svg>

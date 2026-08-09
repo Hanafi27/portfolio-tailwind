@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "node scripts/build-css.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

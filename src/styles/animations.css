@@ -1,0 +1,61 @@
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes line-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.float-soft {
+  animation: float-soft 4.5s ease-in-out infinite;
+}
+
+.animated-line {
+  background: linear-gradient(
+    90deg,
+    rgb(14 165 233),
+    rgb(16 185 129),
+    rgb(99 102 241),
+    rgb(14 165 233)
+  );
+  background-size: 200% 100%;
+  animation: line-flow 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .interactive-card,
+  .skill-card,
+  .float-soft,
+  .animated-line,
+  .modal-panel {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}

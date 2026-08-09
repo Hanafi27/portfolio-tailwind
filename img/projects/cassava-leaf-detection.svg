@@ -1,0 +1,16 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="84" y="72" width="792" height="396" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="124" y="116" width="236" height="28" rx="8" fill="#16a34a"/>
+  <rect x="124" y="168" width="310" height="18" rx="6" fill="#cbd5e1"/>
+  <rect x="124" y="206" width="236" height="18" rx="6" fill="#e2e8f0"/>
+  <rect x="124" y="272" width="178" height="118" rx="16" fill="#dcfce7"/>
+  <rect x="330" y="272" width="178" height="118" rx="16" fill="#f0fdf4"/>
+  <rect x="536" y="272" width="178" height="118" rx="16" fill="#ecfdf5"/>
+  <path d="M656 153c-72 10-120 64-126 142 75-8 124-59 126-142Z" fill="#22c55e"/>
+  <path d="M704 206c-58 6-98 47-106 106 60-3 103-44 106-106Z" fill="#16a34a"/>
+  <path d="M598 312c28-54 64-90 110-114" stroke="#14532d" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="740" cy="154" r="34" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="8"/>
+  <path d="M762 176 802 216" stroke="#0ea5e9" stroke-width="10" stroke-linecap="round"/>
+  <text x="124" y="438" fill="#334155" font-family="Arial, sans-serif" font-size="28" font-weight="700">Deteksi Jenis Daun Singkong</text>
+</svg>
